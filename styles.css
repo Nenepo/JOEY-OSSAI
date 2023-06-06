@@ -99,6 +99,7 @@ li{
   }
   .main p{
     color: #F6F1F1;
+    text-align: justify;
   }
 .fade-in{
   opacity: 0;
