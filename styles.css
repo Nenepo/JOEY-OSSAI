@@ -5,13 +5,22 @@
   box-sizing: border-box;
 }
 body{
-
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  padding: 50px;
+  padding: 100px;
 }
 h1,h2,h3,h4,h5{
   font-family: 'Cormorant Infant', serif;
   
+}
+.main h3{
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #ffff;
+}
+a{
+  text-decoration: none;
 }
 p {
   font-family: "Muli", sans-serif;
@@ -57,16 +66,83 @@ li{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: grey;
+  background-color: #454545;
   margin: 10px 20px 10px  5px;
 }
 .social-icon{
-  
   width: 15px;
- 
-  
   }
+  .nav{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+  }
+  .list-items{
+    
+   color: white;
+   font-size: 25px;
+   margin: 0  50px ;
+  }
+  .list-items:hover{
+    text-decoration: underline;
+  }
+  .main{
+    background-color: #454545;
+    padding: 50px;
+    margin-top: 20px;
+    border-radius: 5%;
+  }
+  .main p{
+    color: #F6F1F1;
+  }
+.fade-in{
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+#skills li{
+  font-size: 20px;
+  color: #F6F1F1;
+  list-style:circle;
+}
+.scroll-left{
+  background-color: white;
+}
+.marquee{
+  display: flex;
+  height: 70px;  
+ 
+  padding: 20px;
+}
+.marquee li{
+ margin-left: 30px;
+ font-size: 20px;
+ font-weight: bold;
+}
+.marquee img{
+  width: 40%;
+  height: 50px;
+  margin-left:60px ;
+}
 @media only screen and (max-width: 480px){
+  body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 20px;
+  }
+  
   .header-img{
     width: 100%;
     height: auto;
@@ -76,15 +152,50 @@ li{
     display: block;
    }
    .social-icon{
-    margin: 20px 20px 10px  10px;
-    width: 23px;
+    margin: 5px;
+    width: 20px;
+    }
+    .icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: grey;
+      margin: 10px 10px 10px  5px;
+    }
+    .list-items{
+    
+      color: white;
+      font-size: 20px;
+      margin: 15px ;
+     }
+     .main{
+     padding: 20px;
+      border-radius: 10px;
+    }
+    .main h3{
+      font-size: 40px;
+    }
+    .main p{
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    #skills li{
+      font-size: 22px;
+      color: #F6F1F1;
+      list-style:circle;
+      margin-left: 20px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
   .header-img{
-    width: 80%;
+    width: 90%;
     height: auto;
     border-radius: 10%;
+    margin-top: 20px;
+   
    }
    .name{
     font-size: 50px;
@@ -106,8 +217,25 @@ li{
   }
  
   .social-icon{
-    margin: 20px 20px 10px  10px;
+    margin: 10px;
     width: 30px;
     
     }
+    .icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: grey;
+      margin: 10px 30px 10px  5px;
+    }
+    .list-items{
+    
+      color: white;
+      font-size: 20px;
+      margin: 15px ;
+     }
+
 }
