@@ -185,6 +185,7 @@ padding: 0 10px;
 #back{
   display: flex;
  justify-content: end;
+ padding: 10px;
 }
 @media only screen and (max-width: 780px){
   .video-container{
