@@ -175,19 +175,26 @@ li{
     transform: translateX(-100%);
   }
 }
-
+.backgound{
+  background-color: #000;
+}
 .video-container{
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-padding: 0 10px;
+padding: 0 30px;
  gap: 2rem;
  margin-top: 20px;
  place-items: center;
  animation: fade-in 1s ease-in-out forwards;
 }
+.video-container h2{
+  color: white;
+  margin-bottom: 10px;
+}
 #projects{
-  width: 80%;
+  width: 100%;
  /* padding: 2px; */
+
  border-radius: 10px;
   box-shadow: 0 2px 4px rgb(63, 36, 5);
 }
@@ -195,14 +202,21 @@ padding: 0 10px;
   display: flex;
  justify-content: end;
  padding: 10px;
+ color: white;
+ text-decoration: underline;
 }
 @media only screen and (max-width: 780px){
   .video-container{
  
-    grid-template-columns: repeat(1, 2fr);
-  padding: 0 10px;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 ;
+    width: 100%;
+    margin: 0;
   
-  
+  }
+  .video-container div{
+    width: 80%;
+  height: 80%;
   }
   body{
     overflow-x: hidden;
