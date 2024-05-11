@@ -155,7 +155,7 @@ li{
   animation: marquee 15s linear infinite;
   overflow-x: hidden;
   aspect-ratio: 16/9;
-  width: 250%; 
+  width: 300%; 
 }
 .scroll-container::-webkit-scrollbar{
   display: hidden;
