@@ -7,17 +7,18 @@
 body{
   overflow-x: hidden;
   scroll-behavior: smooth;
-  padding: 100px;
+  padding: 10px 20px;
 }
 h1,h2,h3,h4,h5{
   font-family: 'Cormorant Infant', serif;
+  color: #000;
   
 }
 .main h3{
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 10px;
-  color: #ffff;
+  color: #000;
 }
 a{
   text-decoration: none;
@@ -26,23 +27,42 @@ p {
   font-family: "Muli", sans-serif;
   font-weight: 400 ;
   font-size: 16px;
+  color: black;
 }
 li{
     list-style: none;
  
 }
 .header-img{
- width: 60%;
- height: auto;
+ width: 40%;
+ height: 40%;
  border-radius: 10%;
+ margin-top: 20px;
+}
+.header-img img{
+  width: 100%;
 }
 .header{
   display: flex;
+  justify-content: space-around;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.info-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .name{
   font-size: 40px;
-  margin-top: 30px;
-  margin-bottom: 2px;
+  /* margin-top: 30px;
+  margin-bottom: 2px; */
 }
 .role{
   font-size: 20px;
@@ -66,11 +86,12 @@ li{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #454545;
+  background-color: #bdbdbd;
   margin: 10px 20px 10px  5px;
 }
 .social-icon{
   width: 15px;
+
   }
   .nav{
     display: flex;
@@ -78,29 +99,30 @@ li{
     height: 40px;
     padding: 10px;
     margin-top: 20px;
-    background-color: black;
+    /* background-color: black; */
     align-items: center;
     justify-content: center;
   }
+  .nav a:hover{
+    text-decoration: underline;
+  }
   .list-items{
     
-   color: white;
-   font-size: 25px;
+   color: black;
+   font-size: 16px;
    margin: 0  50px ;
   }
   .list-items:hover{
     text-decoration: underline;
   }
   .main{
-    background-color: #454545;
-    padding: 40px;
+    /* background-color: #454545; */
+    padding: 50px;
     margin-top: 20px;
     border-radius: 5%;
   }
   .main p{
-    color: #F6F1F1;
-    text-align: justify;
-    
+    color: #000;
   }
 .fade-in{
   opacity: 0;
@@ -115,33 +137,68 @@ li{
   }
 }
 #skills li{
-  font-size: 20px;
-  color: #F6F1F1;
+  font-size: 16px;
+  color: #000;
   list-style:circle;
+  font-family: "Muli", sans-serif;
 }
-.scroll-left{
+.scroll-container{
   background-color: white;
+  overflow-x: hidden;
+  width: 100%; 
+  height: 300px;
 }
-.marquee{
+.scroll-content {
   display: flex;
-  height: 70px;  
+  flex-wrap: nowrap;
+  animation: marquee 20s linear infinite;
+  aspect-ratio: 16/9;
+  width: 150%; 
+}
+
+.scroll-content img {
+  width: auto; /* Ensure images maintain aspect ratio */
+  
+  max-height: 100px; /* Adjust height as needed */
+  margin-right: 20px; /* Add space between images */
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.video-container{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+padding: 0 10px;
+ gap: 2rem;
+ margin-top: 20px;
+ place-items: center;
+ animation: fade-in 1s ease-in-out forwards;
+}
+#projects{
+  width: 80%;
+ /* padding: 2px; */
+ border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(63, 36, 5);
+}
+#back{
+  display: flex;
+ justify-content: end;
+ padding: 10px;
+}
+@media only screen and (max-width: 780px){
+  .video-container{
  
-  padding: 20px;
-}
-.marquee li{
- margin-left: 30px;
- font-size: 20px;
- font-weight: bold;
-}
-.marquee img{
-  width: 40%;
-  height: 50px;
-  margin-left:60px ;
-}
-footer {
-margin-top: 20px;
-}
-@media only screen and (max-width: 480px){
+    grid-template-columns: repeat(1, 2fr);
+  padding: 0 10px;
+  
+  
+  }
   body{
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -171,8 +228,7 @@ margin-top: 20px;
       margin: 10px 10px 10px  5px;
     }
     .list-items{
-    
-      color: white;
+ 
       font-size: 20px;
       margin: 15px ;
      }
@@ -189,7 +245,7 @@ margin-top: 20px;
     }
     #skills li{
       font-size: 22px;
-      color: #F6F1F1;
+
       list-style:circle;
       margin-left: 20px;
     }
@@ -243,7 +299,7 @@ margin-top: 20px;
     }
     .list-items{
     
-      color: white;
+      color: black;
       font-size: 20px;
       margin: 15px ;
      }
